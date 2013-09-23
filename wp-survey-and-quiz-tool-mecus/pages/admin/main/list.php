@@ -95,7 +95,7 @@
 		<p style="background-color:#FFFFE0;border:1px solid #E6DB55;padding:20px;margin:25px 0 15px;font-weight:bold;">Número total de votos: 
 		<?php 
 			global $wpdb;
-			$lastID = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM ".WPSQT_TABLE_RESULTS." ORDER BY `id` DESC LIMIT 0,1" ) );
+			$lastID = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM %s ORDER BY `id` DESC LIMIT 0,1", WPSQT_TABLE_RESULTS )  );
 			echo $lastID;
 		?>
 		</p>
