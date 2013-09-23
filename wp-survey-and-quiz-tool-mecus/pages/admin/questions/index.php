@@ -136,8 +136,8 @@ var saveOrder = function() {
                     $answer_10 = 0;
                     
                     
-                    $RESULTS_count = $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM ".WPSQT_TABLE_RESULTS ) );
-                    $lastID = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM ".WPSQT_TABLE_RESULTS." ORDER BY `id` DESC LIMIT 0,1" ) );
+                    $RESULTS_count = $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM %s", WPSQT_TABLE_RESULTS ) );
+                    $lastID = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM %s ORDER BY `id` DESC LIMIT 0,1", WPSQT_TABLE_RESULTS ) );
                     
                     for($i = 1; $i <= $lastID; $i++){
                     
